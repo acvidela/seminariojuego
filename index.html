@@ -8,6 +8,8 @@
     <link rel="icon" href="img\icono.png" type="image/png">
     
     <title>Play and game</title>
+
+    <script src=".\juegos\piedraPapelTijera.js"></script>
 </head>
 <body>
     <header>
@@ -20,11 +22,25 @@
     <main>
         <div class="contenedor-medio">
             <div class="arcade-machine">
-                <video src="./img/Play.mp4" autoplay="true"></video>    
+                <video id="videoInicio" src="./img/Play.mp4" autoplay="true"></video>    
+                <div class="juegoPPT" id="PPT">
+                    <h1>Piedra, Papel o Tijera</h1>
+                    <div id="game-container">
+                        <div class="options">
+                            <button class="btn" id="piedra">Piedra</button>
+                            <button class="btn" id="papel">Papel</button>
+                            <button class="btn" id="tijera">Tijera</button>
+                        </div>
+                        <div class="result">
+                            <p>Elige una opción para comenzar.</p>
+                            <p id="winner"></p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="game-controls">
                 <button class="control-button">Tateti</button>
-                <button class="control-button">Piedra, papel o tijera</button>
+                <button class="control-button" id="botonPPT" onclick="iniciarPiedraPapelTijera()">Piedra, papel o tijera</button>
             </div>
         </div>
     </main>
